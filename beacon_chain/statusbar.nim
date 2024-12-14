@@ -79,7 +79,7 @@ proc update*(s: var StatusBarView) =
   updateCells s.layout.cellsRight, s.model
 
 func width(cell: StatusBarCell): int =
-  cell.label.len + cell.content.len + 4 # separator + pading
+  cell.label.len + cell.content.len + 4 # separator + padding
 
 func width(cells: seq[StatusBarCell]): int =
   result = max(0, cells.len - 1) # the number of separators
